@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import * as operations from 'redux/contacts-operations';
-import { selectContacts, selectError } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 import css from './ContactForm.module.css';
 
@@ -11,7 +11,7 @@ export function ContactForm() {
   const [number, setNumber] = useState('');
 
   const contacts = useSelector(selectContacts);
-  const error = useSelector(selectError);
+  // const error = useSelector(selectError);
 
   const dispatch = useDispatch();
 
